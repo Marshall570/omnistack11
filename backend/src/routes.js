@@ -7,7 +7,6 @@ const profile_controller = require('./controller/ProfileController')
 const session_controller = require('./controller/SessionController')
 
 
-
 routes.post('/ongs', ong_controller.create)
 routes.get('/ongs', ong_controller.select)
 
@@ -17,6 +16,6 @@ routes.delete('/incidents/:id', incidents_controller.delete)
 
 routes.get('/profile', profile_controller.select)
 
-routes.post('/session', session_controller.create)
+routes.post('/sessions', session_controller.create)
 
 module.exports = routes
