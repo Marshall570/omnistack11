@@ -5,7 +5,7 @@ app.use(express.json())     // informar EXPRESS que BODY = JSON
 
 
 /**
- * Recurso = Literalmente um recuros
+ * Recurso = Literalmente um recurso
  * Rota = Caminho para o front-end
  */
 
