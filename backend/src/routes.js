@@ -1,5 +1,9 @@
 const express = require('express')
-const { celebrate, Joi, Segments } = require('celebrate')
+const {
+    celebrate,
+    Joi,
+    Segments
+} = require('celebrate')
 const routes = express.Router()
 
 
@@ -26,12 +30,12 @@ routes.get('/incidents', celebrate({
     [Segments.QUERY]: Joi.object().keys({
         page: Joi.number()
     })
-}),incidents_controller.select)
+}), incidents_controller.select)
 routes.delete('/incidents/:id', celebrate({
     [Segments.PARAMS]: Joi.object().keys({
         id: Joi.number().required()
     })
-}),incidents_controller.delete)
+}), incidents_controller.delete)
 
 routes.get('/profile', celebrate({
     [Segments.HEADERS]: Joi.object({
